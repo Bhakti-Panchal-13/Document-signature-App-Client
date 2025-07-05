@@ -29,7 +29,7 @@ console.log('SignUp Info',signupInfo)
     }
 
     try {
-      const url = `http://localhost:8080/api/auth/signup`;
+      const url = `https://document-signature-app-server-hb3x.onrender.com/api/auth/signup`;
       const response = await fetch(url, {
         method: 'POST',
         headers: {
