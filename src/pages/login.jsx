@@ -51,7 +51,7 @@ function Login() {
         login({ name, email }); // ✅ Update context with user info
         console.log('Success login ✅');
         // navigate to home
-        navigate('/home'); // ✅ Navigate instantly
+        navigate('/documents'); // ✅ Navigate instantly
       
       } else if (error) {
         const details = error?.details[0]?.message || 'Something went wrong';
