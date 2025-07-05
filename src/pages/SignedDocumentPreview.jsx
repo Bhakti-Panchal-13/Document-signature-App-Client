@@ -17,7 +17,7 @@ export default function SignedDocumentPreview() {
       try {
         const res = await axios.get(`/docs/${id}`, { withCredentials: true });
         if (res.data.success && res.data.document.isSigned) {
-          setSignedUrl(`http://localhost:8080${res.data.document.signedFileUrl}`);
+          setSignedUrl(`https://document-signature-app-server-hb3x.onrender.com/api${res.data.document.signedFileUrl}`);
         } else {
           alert("Signed document not found.");
           navigate("/documents");
