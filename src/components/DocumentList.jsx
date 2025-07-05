@@ -44,7 +44,7 @@ function DocumentList() {
 
               <div className="space-x-4">
                 <a
-                  href={`http://localhost:8080/${fixedPath}`}
+                  href={`https://document-signature-app-server-hb3x.onrender.com/api/${fixedPath}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:underline"
