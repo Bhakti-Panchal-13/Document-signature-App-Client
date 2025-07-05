@@ -148,7 +148,7 @@ export default function Dashboard() {
               const fixedPath = doc.path.replace(/\\/g, '/'); // fix Windows paths
               const savedFilename = fixedPath.split('/').pop(); // get saved file name on disk
               const timestamp = Date.now();
-              const signedFilename = `signed-${timestamp}-${savedFilename}`; // ✅ no path.basename!
+              const signedFilename = `signed-${timestamp}-${savedFilename}`; 
               return (
                 <div
                   key={doc._id}
@@ -175,10 +175,9 @@ export default function Dashboard() {
                     <Link to={`/preview/${doc._id}?filename=${encodeURIComponent(savedFilename)}`}>
                       <FiFileText className="hover:text-purple-600" />
                     </Link>
-                    {/* ******************* */}
                 
                   {/* {(doc.isSigned && doc.signedFileUrl) ? (
-                        <a href={`http://localhost:8080${doc.signedFileUrl}`} target="_blank" rel="noreferrer">
+                        <a href={`https://document-signature-app-server-hb3x.onrender.com/api${doc.signedFileUrl}`} target="_blank" rel="noreferrer">
                           <FiDownload className="hover:text-green-600" />
                         </a>
                       ) : (
